@@ -1,0 +1,16 @@
+FROM php:fpm-alpine
+
+WORKDIR /var/www/html
+
+RUN apk add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data
+
+RUN set -ex \
+  && apk --no-cache add \
+    postgresql-dev
+
+RUN docker-php-ext-install pdo pdo_pgsql
+
+
+#composer
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer

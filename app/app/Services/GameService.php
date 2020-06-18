@@ -295,8 +295,11 @@ class GameService {
         $firstField = -1;
         foreach ($fields as $level){
             foreach ($level as $field){  
+
+                $lastLevel = count($fields)-1;
+                $lastPosition = count($level)-1;
                 
-                if($field[count[$field]][$field[count($field)]] === 0){                    
+                if($fields[$lastLevel][$lastPosition] === 0){                    
                     break;
                     return true;
                 }

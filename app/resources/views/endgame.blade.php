@@ -5,11 +5,11 @@
 
 <div class="jumbotron">
   <h1 class="display-4">Игра завершена</h1>
-  <p class="lead">@if($win === true) Победа! @else Поражение @endif </p>
+  <p class="lead">результать игры:</p>
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p>вывод статистики:</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <a class="btn btn-primary btn-lg" href="/" role="button">На главную</a>
   </p>
 </div>
 

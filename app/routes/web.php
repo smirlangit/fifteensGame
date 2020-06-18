@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function(){
+
+    return view('startgame');
+})->name('home')->middleware("auth");
+
+
+
+//API интерфейс
+Route::post('/api/game', 'GameController@createNewGame')->middleware("auth");
+Route::post('/api/game/{id}/solve', 'GameController@checkSolve')->middleware("auth");
+
+
+Route::post('/register', 'Auth\RegisterController@create');
+Route::post('/logout', 'Auth\LoginController@logout');
+Auth::routes();
+

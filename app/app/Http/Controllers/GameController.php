@@ -36,7 +36,7 @@ class GameController extends Controller {
                 $gameFieldString = $request->post('string-game-field');
                 
             } else {
-                return redirect()->back();
+                //return redirect()->back();
             }
             
             
